@@ -1,6 +1,58 @@
-import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import Learn from './Learn';
+import React from "react";
+
+
+
+
+
+const styles = {
+  form: {
+    background: "#e8eaf6",
+    width: "50%",
+	  margin: "0 auto"
+  },
+  heading: {
+    background: "#3f51b5",
+    minHeight: 50,
+    lineHeight: 3.5,
+    fontSize: "1.2rem",
+    color: "white",
+    padding: "0 20px"
+  },
+  content: {
+    padding: 20
+  },
+  label: {
+    display: "block",
+	marginBottom: "5px"
+  },
+  input: {
+    width: "100%",
+    padding: "10px",
+    border:" 1px solid #ccc",
+    borderRadius: "5px",
+    marginBottom: "20px;",
+    boxSizing: "border-box"
+  },
+ 
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+// input[type="submit"]:hover {
+// 	background-color: #3e8e41;
+// }
+
+
 
 function Contact(props) {
   return (
@@ -19,15 +71,21 @@ function Contact(props) {
         conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
         rhoncus. Etiam vel condimentum magna, quis tempor nulla.
       </p>
-      <Link to="learn" role="button" className="btn btn-link">
-        Learn More
-      </Link>
-      <Link to="contact" role="button" className="btn btn-link">
-        Learn Less
-      </Link>
-      <Routes>
-        <Route path="learn" element={<Learn />} />
-      </Routes>
+      <form style={styles.form} id="contact-form" method="post" action="#">
+        <label style={styles.label} for="name">Name:</label>
+        <input style={styles.input} type="text" id="name" name="name" required />
+
+        <label style={styles.label} for="email">Email:</label>
+        <input style={styles.input} type="email" id="email" name="email" required />
+
+        <label style={styles.label} for="subject">Subject:</label>
+        <input style={styles.input} type="text" id="subject" name="subject" required />
+
+        <label style={styles.label} for="message">Message:</label>
+        <textarea style={styles.input} id="message" name="message" required></textarea>
+
+        <input  type="submit" value="Send" />
+      </form>
     </div>
   );
 }

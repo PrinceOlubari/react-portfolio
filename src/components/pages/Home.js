@@ -1,21 +1,57 @@
 import React from "react";
+import reactImage from "../../assets/reactImage.jpeg"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
+
+const styles = {
+  body: {
+  background: "#e8eaf6",
+  margin: "0px",
+	padding: "0px",
+	fontFamily: "Arial, sans-serif"
+  },
+  heading: {
+    background: "#3f51b5",
+    minHeight: 50,
+    lineHeight: 3.5,
+    fontSize: "1.2rem",
+    color: "white",
+    padding: "0 20px"
+  },
+  content: {
+    padding: 20
+  },
+  
+
+};
+
+
+
 
 function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
-        varius, blandit rhoncus sem. Morbi lacinia nisi ac dui fermentum, sed luctus urna tincidunt.
-        Etiam ut feugiat ex. Cras non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna
-        imperdiet ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras rutrum
-        ligula in tincidunt commodo. Morbi sit amet mollis orci, in tristique ex. Donec nec ornare
-        elit. Donec blandit est sed risus feugiat porttitor. Vestibulum molestie hendrerit massa non
-        consequat. Vestibulum vitae lorem tortor. In elementum ultricies tempus. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus.
-      </p>
-    </div>
+    <Container>
+      <Row>
+        <Col><img src={reactImage} alt={"Profile"}  /></Col>
+        <Col lg={9} style={styles.body}> 
+        <h2>About Me</h2>
+        <p>
+        Welcome to my page. I am a web developer with techincal skills in HTML5, CSS, JavaScript, React JS, Node JS. This
+        Portfolio website was created with React JS. This is a skeleton of the website and I hope to style it professionally
+        into a well functional website at the end of the bootcamp. The bootcamp is one of my best decisions for the year 2023.
+        Stay tuned in.
+      </p></Col>
+      </Row>
+    </Container>
   );
 }
-
 export default Home;
+
+
+
+
+
+

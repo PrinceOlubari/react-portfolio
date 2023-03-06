@@ -1,8 +1,10 @@
 import React from "react";
+import ProjectGallery from "../Project/ProjectGallery.js";
 
 function About() {
   return (
     <div>
+      <ProjectGallery></ProjectGallery>
       <h1>About Page</h1>
       <p>
         Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui
