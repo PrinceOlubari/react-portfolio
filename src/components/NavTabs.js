@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 function NavTabs() {
   return (
@@ -9,7 +9,7 @@ function NavTabs() {
           to="/"
           end
           className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           Home
@@ -17,43 +17,24 @@ function NavTabs() {
       </li>
       <li className="nav-item">
         <NavLink
-          to="about"
-          className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
-          }
-        >
-          About
-        </NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink
-          to="blog"
-          className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
-          }
-        >
-          Blog
-        </NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink
-          to="contact"
+          to="/about"
           end
           className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          My Projects
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          to="/contact"
+          end
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           Contact
-        </NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink
-          to="contact/learn"
-          className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
-          }
-        >
-          Learn
         </NavLink>
       </li>
     </ul>
